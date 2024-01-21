@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'next',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -26,6 +27,8 @@ module.exports = {
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     'max-len': [
       1,
       250,
