@@ -1,4 +1,4 @@
-import React from 'react';
+okimport React from 'react';
 import { useRouter } from 'next/router';
 
 import { getCategories, getCategoryPost } from '../../services';
@@ -39,12 +39,12 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-// Specify dynamic routes to pre-render pages based on data.
+// Specify dynamic routes to pre-render pages based on data
 // The HTML is generated at build time and will be reused on each request.
-// export async function getStaticPaths() {
-//   const categories = await getCategories();
-//   return {
-//     paths: categories.map(({ slug }) => ({ params: { slug } })),
-//     fallback: true,
-//   };
-// }
+   export async function getStaticPaths() {
+   const categories = await getCategories();
+    return {
+     paths: categories.map(({ slug }) => ({ params: { slug } })),
+     fallback: true,
+  };
+ }
