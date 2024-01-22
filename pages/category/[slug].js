@@ -46,3 +46,4 @@ export async function getStaticPaths() {
     paths: c.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
   };
+}
