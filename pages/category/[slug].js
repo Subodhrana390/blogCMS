@@ -45,5 +45,5 @@ export async function getStaticPaths() {
   return {
     paths: categories.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
-  };
+  }
 }
