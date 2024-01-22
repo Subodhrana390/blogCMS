@@ -7,7 +7,7 @@ import { PostCard, Categories, Loader } from '../../components';
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
 
-  if(router.isFallback) {
+  if (router.isFallback) {
     return <Loader />;
   }
 
@@ -39,12 +39,12 @@ export async function getStaticProps({ params }) {
   };
 }
 
-// Specify dynamic routes to pre-render pages based on data
+// Specify dynamic routes to pre-render pages based on data.
 // The HTML is generated at build time and will be reused on each request.
-   export async function getStaticPaths() {
-   const categories = await getCategories();
-    return {
-     paths: categories.map(({ slug }) => ({ params: { slug } })),
-     fallback: true,
+export async function getStaticPaths() {
+  const categories = await getCategories();
+  return {
+    paths: categories.map(({ slug }) => ({ params: { slug } })),
+    fallback: true,
   };
- }
+}
