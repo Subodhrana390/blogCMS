@@ -55,7 +55,7 @@ const PostDetail = ({ post }) => {
             src={obj.src}
           />
         );
-        case 'code':
+      case 'code':
         return (
           <pre key={index} className="bg-gray-200 rounded p-4 mb-8">
             <code>{modifiedText}</code>
